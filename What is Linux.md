@@ -1,5 +1,7 @@
 [什么是Linux？](https://www.linux.com/what-is-linux)
 
+---
+
 ### 文件类型
 
 **普通文件**（regular file）：就是一般存取的文件，由ls -al显示出来的属性中，第一个属性为 [-]，例如 [-rwxrwxrwx]。另外，依照文件的内容，又大致可以分为：  
