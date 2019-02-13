@@ -182,55 +182,56 @@ scp -rp username@remoteIP:/path/filename /path #将远程文件从服务器下�
 - 或者用 apropos
 - 统计文件所占用的实际磁盘空间： du (du - estimate file space usage)
 - 统计文件中的字符，字节数: wc -c/-l/-w (wc - print the number of newlines, words, and bytes in files)
-- 查看文件的内容： od -x/-c/.... (od - dump files in octal and other formats)
-　　我认为od最有用的就是文件的字节流了: od -t x1 filename
-　　查看文件的 Ascii 码形式: od -t c filename (其中统计信息最左边的是： 字节数)
-- 查找命令所在文件的位置： which od 输出： /usr/bin/od
-　　查看该文件由哪个包提供： dpkg -S /usr/bin/od 输出: coreutils: /usr/bin/od
-　　再查看coreutils包的全部内容就知道了linux的核心命令: dpkg -L coreutils
-　　然后 info coreutils 哈哈，认真学吧， 满世界都是命令!
-- 可以用man 命令产看某个命令的所有section 的解释: man -a tty
-　　然后用q,和next 转换到下一个section的解释
+- 查看文件的内容： od -x/-c/.... (od - dump files in octal and other formats)  
+我认为od最有用的就是文件的字节流了: od -t x1 filename  
+查看文件的 Ascii 码形式: od -t c filename (其中统计信息最左边的是： 字节数)
+- 查找命令所在文件的位置： which od 输出： /usr/bin/od  
+查看该文件由哪个包提供： dpkg -S /usr/bin/od 输出: coreutils: /usr/bin/od  
+再查看coreutils包的全部内容就知道了linux的核心命令: dpkg -L coreutils  
+然后 info coreutils 哈哈，认真学吧， 满世界都是命令!
+- 可以用man 命令产看某个命令的所有section 的解释: man -a tty  
+然后用q,和next 转换到下一个section的解释
 - bash 的好用的快捷键:
-　　ctrl+a:光标移到行首。
-　　ctrl+b:光标左移一个字母
-　　ctrl+c:杀死当前进程。
-　　ctrl+d:退出当前 Shell。
-　　ctrl+e:光标移到行尾。
-　　ctrl+h:删除光标前一个字符，同 backspace 键相同。
-　　ctrl+k:清除光标后至行尾的内容。
-　　ctrl+l:清屏，相当于clear。
-　　ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history
-　　ctrl+u: 清除光标前至行首间的所有内容。
-　　ctrl+w: 移除光标前的一个单词
-　　ctrl+t: 交换光标位置前的两个字符
-　　ctrl+y: 粘贴或者恢复上次的删除
-　　ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
-　　ctrl+f: 光标右移
-　　ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
+-　ctrl+a:光标移到行首。
+-　ctrl+b:光标左移一个字母
+-　ctrl+c:杀死当前进程。
+-　ctrl+d:退出当前 Shell。
+-　ctrl+e:光标移到行尾。
+-　ctrl+h:删除光标前一个字符，同 backspace 键相同。
+-　ctrl+k:清除光标后至行尾的内容。
+-　ctrl+l:清屏，相当于clear。
+-　ctrl+r:搜索之前打过的命令。会有一个提示，根据你输入的关键字进行搜索bash的history
+-　ctrl+u: 清除光标前至行首间的所有内容。
+-　ctrl+w: 移除光标前的一个单词
+-　ctrl+t: 交换光标位置前的两个字符
+-　ctrl+y: 粘贴或者恢复上次的删除
+-　ctrl+d: 删除光标所在字母;注意和backspace以及ctrl+h的区别，这2个是删除光标前的字符
+-　ctrl+f: 光标右移
+-　ctrl+z : 把当前进程转到后台运行，使用’ fg ‘命令恢复。比如top -d1 然后ctrl+z ，到后台，然后fg,重新恢复
 - 快速粘贴：先在一个地方选中文字，在欲粘贴的地方按鼠标 中键 即可。
 - 等效中键：a 、按下滑轮等效于中键。b、同时按下鼠标 左右键，等效于中键。
 - 快速重启X服务： 同时按下： Alt + Ctrl + Backspace 三个键。
 - 打开"运行"窗口： 同时按下 Alt + F2 键。
-- 截屏： a、全屏：直接按下 PrtScr 键。
-　　b、当前窗口：同时按下 Alt + PrtScr 键。
-　　c、延时截屏：在 终端 或 "运行"窗口中输入命令： gnome-screenshot --delay 3 ，将延时 3 秒后截屏。
+- 截屏：  
+a、全屏：直接按下 PrtScr 键。  
+b、当前窗口：同时按下 Alt + PrtScr 键。  
+c、延时截屏：在 终端 或 "运行"窗口中输入命令： gnome-screenshot --delay 3 ，将延时 3 秒后截屏。
 - 直接将 文件管理器 中的文件拖到 GNOME终端 中就可以在终端中得到完整的路径名。 [6]  8.ulimit
-　　ulimit：显示（或设置）用户可以使用的资源的限制（limit），这限制分为软限制（当前限制）和硬限制（上限），其中硬限制是软限制的上限值，应用程序在运行过程中使用的系统资源不超过相应的软限制，任何的超越都导致进程的终止。
-　　ulimited 不限制用户可以使用的资源，但本设置对可打开的最大文件数（max open files）
-　　和可同时运行的最大进程数（max user processes）无效
-　　-a 列出所有当前资源极限
-　　-c 设置core文件的最大值.单位:blocks
-　　-d 设置一个进程的数据段的最大值.单位:kbytes
-　　-f Shell 创建文件的文件大小的最大值，单位：blocks
-　　-h 指定设置某个给定资源的硬极限。如果用户拥有 root 用户权限，可以增大硬极限。任何用户均可减少硬极限
-　　-l 可以锁住的物理内存的最大值
-　　-m 可以使用的常驻内存的最大值,单位：kbytes
-　　-n 每个进程可以同时打开的最大文件数
-　　-p 设置管道的最大值，单位为block，1block=512bytes
-　　-s 指定堆栈的最大值：单位：kbytes
-　　-S 指定为给定的资源设置软极限。软极限可增大到硬极限的值。如果 -H 和 -S 标志均未指定，极限适用于以上二者
-　　-t 指定每个进程所使用的秒数,单位：seconds
-　　-u 可以运行的最大并发进程数
-　　-v Shell可使用的最大的虚拟内存，单位：kbytes
-　　eg: ulimit -c 1000(可以先通过ulimit -c 查看原来的值)
+-　ulimit：显示（或设置）用户可以使用的资源的限制（limit），这限制分为软限制（当前限制）和硬限制（上限），其中硬限制是软限制的上限值，应用程序在运行过程中使用的系统资源不超过相应的软限制，任何的超越都导致进程的终止。
+-　ulimited 不限制用户可以使用的资源，但本设置对可打开的最大文件数（max open files）
+-　和可同时运行的最大进程数（max user processes）无效
+-　-a 列出所有当前资源极限
+-　-c 设置core文件的最大值.单位:blocks
+-　-d 设置一个进程的数据段的最大值.单位:kbytes
+-　-f Shell 创建文件的文件大小的最大值，单位：blocks
+-　-h 指定设置某个给定资源的硬极限。如果用户拥有 root 用户权限，可以增大硬极限。任何用户均可减少硬极限
+-　-l 可以锁住的物理内存的最大值
+-　-m 可以使用的常驻内存的最大值,单位：kbytes
+-　-n 每个进程可以同时打开的最大文件数
+-　-p 设置管道的最大值，单位为block，1block=512bytes
+-　-s 指定堆栈的最大值：单位：kbytes
+-　-S 指定为给定的资源设置软极限。软极限可增大到硬极限的值。如果 -H 和 -S 标志均未指定，极限适用于以上二者
+-　-t 指定每个进程所使用的秒数,单位：seconds
+-　-u 可以运行的最大并发进程数
+-　-v Shell可使用的最大的虚拟内存，单位：kbytes
+-　eg: ulimit -c 1000(可以先通过ulimit -c 查看原来的值)
