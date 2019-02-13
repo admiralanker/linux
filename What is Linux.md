@@ -152,15 +152,15 @@
 - 临时启动一个服务: /etc/init.d/服务名 start
 - 控制台下显示中文: sudo apt-get install zhcon
 - 查找某个文件: whereis filename 或 find 目录 -name 文件名
-- 通过ssh传输文件
-　　scp -rp /path/filename username@remoteIP:/path #将本地文件拷贝到服务器上
-　　scp -rp username@remoteIP:/path/filename /path #将远程文件从服务器下载到本地
+- 通过ssh传输文件  
+scp -rp /path/filename username@remoteIP:/path #将本地文件拷贝到服务器上  
+scp -rp username@remoteIP:/path/filename /path #将远程文件从服务器下载到本地
 5. 压缩:
 - 解压缩 a.tar.gz: tar zxvf a.tar.gz
 - 解压缩 a.tar.bz2: tar jxvf a.tar.bz2
 - 压缩aaa bbb目录为xxx.tar.gz: tar zcvf xxx.tar.gz aaa bbb
 - 压缩aaa bbb目录为xxx.tar.bz2: tar jcvf xxx.tar.bz2 aaa bbb [6] 
-6. Nautilus：
+6. Nautilus：  
 特殊 URI 地址
 - computer:/// - 全部挂载的设备和网络
 - network:/// - 浏览可用的网络
@@ -175,7 +175,7 @@
 - themes:/// - 系统主题文件夹
 - 显示隐藏文件: Ctrl+h
 - 显示地址栏: Ctrl+l
-- 查看已安装字体: 在nautilus的地址栏里输入”fonts:///“，就可以查看本机所有的fonts [6] 
+- 查看已安装字体: 在nautilus的地址栏里输入”fonts:///“，就可以查看本机所有的fonts
 7.补充部分：
 - 查看本地所有的tpc,udp监听端口: netstat -tupln (t=tcp, u=udp, p=program, l=listen, n=numric)
 - 通过man搜说相关命令: man -k keyword . eg: man -k user
