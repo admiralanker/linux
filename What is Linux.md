@@ -176,6 +176,7 @@ scp -rp username@remoteIP:/path/filename /path #将远程文件从服务器下�
 - 显示隐藏文件: Ctrl+h
 - 显示地址栏: Ctrl+l
 - 查看已安装字体: 在nautilus的地址栏里输入”fonts:///“，就可以查看本机所有的fonts  
+
 7.补充部分：
 - 查看本地所有的tpc,udp监听端口: netstat -tupln (t=tcp, u=udp, p=program, l=listen, n=numric)
 - 通过man搜说相关命令: man -k keyword . eg: man -k user
